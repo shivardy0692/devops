@@ -45,7 +45,7 @@ echo "your files are deleted"
 
 **********create user***********
 #useradd test
-#cat /etc/shadow        -  users in machine
+#cat /etc/shadow        -  root permissions
 #passwd test
 #new pasword
 #conform password
