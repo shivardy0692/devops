@@ -1,0 +1,3 @@
+************** jenkins ***********
+
+#01) [DeployPublisher][WARN] No wars found -> check war file path in your project (ex: /home/one/SampleProject/target/test.war) then we mention war/ear files ex: **/target/.war in deploy war/ear to a container.   

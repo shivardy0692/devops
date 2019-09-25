@@ -1,0 +1,76 @@
+ll                 -   long list
+pwd                -   present working directory
+ls                 -   list show
+ls -ltr            -   show file permissions
+cd                 -   change directory
+cd ..              -   back
+clear              -   clear the terminal
+history            -   past commands
+history -c         -   to clear the history
+vi                 -   view and edit (edit - i; exit nd exit force- esc + :wq!)
+cat                -   view and edit
+cp                 -   copy file
+rm -rf *           -   to remove directory 
+rm *               -   to remove all files in a directory
+who                -   login information
+mkdir              -   to create a directory (folder blue color)
+mkdir -p one/two   -   to craete a directory inside a directory
+touch t{1..5}.txt  -   craete multiple file
+chmod              -   
+cp                 -   copy
+cp -r              -   copy with file
+cp -v              -   copy with file
+mv                 -   move
+ll -lh /tmp        -   to display size of file and etc.
+
+yum                - yellow update module
+
+***************shell script******************
+sh test.sh         -   to run a script
+sh                 - bourne shell
+csh                - c shell
+ksh                - korn shell
+bash               - bourne again shell
+
+#!/bin/bash
+mkdir test1
+echo "test1 craeted"
+touch test1/t{1..5}.txt
+echo "files created"
+ls -ltr test1/*
+echo "above are the files"
+rm -rf test1/*
+echo "your files are deleted"
+
+
+**********create user***********
+#useradd test
+#cat /etc/shadow        -  users in machine
+#passwd test
+#new pasword
+#conform password
+#cat /etc/passwd        - to check user id
+#useradd -u 1024 test   - create user with id
+#groupadd admin
+#cat /etc/group
+#chmod 777 test         - give permissions to user (read, write, exicution) 
+#usermod -g admin test
+#usermod -l test test1  - rename
+#userdel -r test1       - remove user(primary group user con't delete)
+
+
+************shutdown commands*************
+shutdown -h now          
+shutdown -h 23:00
+shutdown -h +10 "save your work"  - shutdown linux to perticular time
+shutdown -c                       - shutdown cancel
+init 0                            - shutdown 
+init 6                            - restart
+reboot
+poweroff                          
+
+
+
+
+
+                                                                            

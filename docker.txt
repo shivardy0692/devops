@@ -1,0 +1,123 @@
+1) what is docker?
+ -->docker is container management
+2)whats is virtualization?
+ -->virtualization means run multiple os on a single machine or physical system.
+3)what is docker images?
+ -->docker images are templares used to create docker containers.
+4)what is containers?
+ -->containers is a running instance of image.
+5)
+
+
+***********************************************
+it --> interactive mode
+d  --> demon 
+
+
+
+************** Docker installation *************
+su # vi /etc/sudoers
+>> test ALL=(ALL:ALL) All
+
+$ sudo yum install java-1.8.0-openjdk-devel
+
+$ sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+
+$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+
+$ sudo yum-config-manager --enable docker-ce-edge
+
+$ sudo yum-config-manager --enable docker-ce-test
+
+$ sudo yum install docker-ce
+
+any issue on display while installation ()
+
+$ sudo systemctl start docker
+
+# docker images
+
+# docker pull ubuntu
+
+# docker images
+
+
+
+
+
+
+
+********************* create containers **********************
+
+# docker run -ti --rm ubuntu /bin/bash (create temporary container)
+
+# docker ps (container start status)
+
+# docker ps -a (container stop status)
+
+# docker run -ti ubuntu /bin/bash (create container)
+
+# exit (stop container)
+
+# docker ps (container status)
+
+# docker start <container ID> or # docker restart <container ID> (start perticular container)
+
+# docker stop <container ID> (stop perticular container)
+
+# docker pause <container ID>
+
+# docker unpause <container ID>
+
+# docker rm <container ID>
+
+# docker inspect <container ID> |less (container complete information like host, memory, cont name)
+
+**********************************************************
+# docker run -ti --name "container_1" --hostname "shiva" -m 10m --memory-swap 20m ubuntu /bin/bash
+**********************************************************
+
+# docker stop $(docker ps -a -q) (stop all containers)
+
+# docker start $(docker ps -a -q) (start all containers) 
+
+# docker rm $(docker ps -a -q) (remove all containers)
+
+
+************************ Errors *****************************
+1) Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+sol- sudo service docker start
+sol- systemctl start docker
+
+
+
+
+
+
+**************************** docker image ***************************
+create docker file ->Dockerfile(starting letter must be capital)
+vi Dockerfile
+-> FROM <IMAGE_NAME>
+-> MAINTAINER shivardy06@gmail.com
+-> RUN yum -y install httpd
+-> COPY index.html /var/www/html
+-> EXPOSE 80
+-> COD apachectl -D FOREGROUND
+:wq
+
+FROM java:latest
+MAINTAINER shiva shivardy06@gmail.com
+LABEL env=production
+ENV apparea /data/app
+Run mkdir -p $apparea
+ADD ./jenkins.war $apparea
+WORKDIR $apparea
+CMD ["java","-jar","jenkins.war"]
+
+
+# docker build .
+# docker tag <image id> <choose name> (create docker name)

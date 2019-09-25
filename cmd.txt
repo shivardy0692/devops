@@ -1,0 +1,4 @@
+1) create new file      ->  copy con test.java (edit page then cnt+z then after enter)
+2) view files           ->  dir
+3) remove folder        ->  RD /S "file_path" (or) rmdir <folder_name>
+4) delete file          ->  del <file_name>

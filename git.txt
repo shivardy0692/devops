@@ -1,0 +1,69 @@
+***************** git installation ***************
+# yum install git (bash git command not found)
+$ git clone <file link>
+$ cd test
+$ git init
+$ git config --global user.name "shiva"
+$ git config --global user.email "shivardy06@gmail.com"
+$ git config --global core.editor "vim"
+$ git config --global color.ui true
+$ git config --list
+
+***************************************************
+git                                -    glass and instrument technology
+sha1                               -    it is a random and unique 40 charecter hexa decimal value(0-9,a-f)
+pom                                -    project object model
+
+$git init
+git config --global
+git remote add origin https://github.com/shivardy0692/test2.git
+$git status                        -    to check the status
+$git add .                         -    add file into github
+$git commit -m "commit msg"        -    commit file to github (shavan number)
+$git commit -am "msg"              -    same file then we use -am
+$git commit --amend -m "msg" file_name -  change msg for last commited file 
+git push -u origin master
+$git log                           -    sha1 number, author name, date
+$git log --oneline                 -    display sha1 numbers in single line
+$git log --since=2019-09-20        -    serach file details with sha1 
+$git log --author="shiva"          -    serach
+$git log --grep="file_name"        -    serach
+$git log --until=2019-09-20
+$git diff sha1 no1..sha1 no2       -    between
+
+$git rm <file name>                -    to remove file
+$git checkout <file nmae>          -    backup a perticular file
+$git rm <file name>                -    file remove permanent
+$git add -f test.php               -    add ignore file using force
+***************************** revert data *****************************************
+$git revert --no-commit <sha1 1st commit>..HEAD
+*************************** reset, stack****************************************
+$git reset --hard <sha1 number4>    -    revove file permanently in working directory, stage/cache, local repo(above sha1 number4)
+$git stash list                     -    temp memory area
+$git stash save "msg"               -    save with msg
+$git stash apply stash@{0}          -    copy
+$git stash pop stash@{0}            -    cut paste
+$git stash drop stash@{0}           -    delete
+$git stash clear                    -    clear temp memory
+***********************************************************************
+$git commit -m "file removed permanently"
+
+$git show
+$git show sha1 number (enter 6 number)   - to get file view
+
+******************************* branch ************************************
+branch                             -    collction of commits
+$git branch                        -    to get branch name
+$git checkout -b new               -    create new branch and select default
+$git checkout master               -    select branch
+$git diff branch1..branch2         -    difference between branches
+$git merge feature                 -    merge branch from one branch to another
+$git branch -d test                -    delete branch(D force)
+
+********************************** git bucket ********************************
+1) internet service (to connect your server at any where)
+2) intranet service (to connect your server with in your office)
+
+git bucket is a java based platform 
+sudo yum -y install java-1.8.0-openjdk
+

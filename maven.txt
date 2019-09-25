@@ -1,0 +1,17 @@
+#) yum install java-1.8.0-openjdk
+   yum install java-1.8.0-openjdk-devel
+   java -version
+   mvn  -version
+-> http://apachemirror.wuchna.com/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
+   vi .bash
+   export M2_HOME=/home/one/apache-maven-3.6.2
+   export PATH=$PATH:$M2_HOME/bin
+
+1) mvn archetype:generate  -> it will create a project structure
+2) mvn validate            -> it will validate a project structure
+3) mvn compile             -> it will convert .jar files into .class files
+4) mvn test                -> it will test .class files
+5) mvn package             -> it will help to create .jar, .war or .ear files
+6) jar -tvf target/simplejar-1.0-SNAPSHOT.jar           -> to show a jar file architecture
+7) java -cp target/simplejar-1.0-SNAPSHOT.jar admin.App -> to show a output
+

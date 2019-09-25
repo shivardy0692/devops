@@ -1,0 +1,20 @@
+* aws is a cloud computing service.
+
+1) what is cloud?
+-> remote access to the server
+2) what is aws?
+-> 
+
+
+******************************************
+pam ->privacy enhanced mail
+ec2 ->elastic compute cloud
+
+**************** Amazon cloudwatch *************
+
+->matric : a matric represents a time-ordered set of data points 
+that are published to cloudwatch. think of a matric as a variable 
+monitor, and the data point represent the value of the variable over 
+time.
+
+->

@@ -1,0 +1,32 @@
+1) role of devops engineer
+-  installatio and configuration 
+-  plugin management
+-  user management 
+-  security management 
+-  global tool management (maven)
+-  creating jobs
+-  monitoring tools
+-  jobs pipeline
+-  integrating diferent tools.
+-  tacking jenkins backup.
+
+2) jenkins is a java based application
+
+3) plugins stored in .jpi format
+
+4) what is plugin?
+-  plugin is a additional software.
+   it will help to interact with the other system.
+-  under plugin management we can install, update, remove the plugins.
+
+5) jenkins directory 	(/var/lib/jenkins)
+
+6) install plugins in advanced mode using .hpi file(mantis-0.26.hpi)
+
+7) what is job?
+-  job means task. to build, integrate, delivary those kind of tasks we 
+   can handle in jenkins job management.
+-  free style job : we can integrate any type of files.
+-  maven job : we can integrate only java files.
+-  pipeline job : sequence of jobs, one job is connected to another job.
+-  multipipe line jobs.
