@@ -76,3 +76,11 @@ git config --global alias.add-commit '!git add -A && git commit'
 and use it with
 
 git add-commit -m 'My commit message'
+
+1)  A merge from the parent branch to the feature branch is called a
+     'sync' or 'catch-up' merge, and a merge from the feature branch to the
+     parent branch is called a 'reintegrate' merge.
+
+
+**************************** migration from svn to git ***************************
+git svn clone --no-metadata -A authors.txt -t tags -b branches -T trunk https://DESKTOP-3L1NRCH/svn/NewRepo/trunk
