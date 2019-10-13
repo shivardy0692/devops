@@ -3,3 +3,9 @@
 3) svnadmin load D:\devops\test_repo < C:\Repositories\newrepo.dump 
 4) svnadmin upgrade D:\devops\test_repo
 5) git svn clone --no-metadata -A authors.txt -t tags -b branches -T trunk https://DESKTOP-3L1NRCH/svn/NewRepo/trunk
+
+*****************************************************************************************************************
+
+-> error log : vi etc/httpd/logs/error_log
+
+
