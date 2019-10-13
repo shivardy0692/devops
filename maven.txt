@@ -15,3 +15,9 @@
 6) jar -tvf target/simplejar-1.0-SNAPSHOT.jar           -> to show a jar file architecture
 7) java -cp target/simplejar-1.0-SNAPSHOT.jar admin.App -> to show a output
 
+********************************************************************************************
+-> <pluginrepositories> in multi module project we can use pluginrepositories 
+-> <plugins> in child project we can directly use plugins, 
+-> <dependencies> 
+-> profile
+-> 

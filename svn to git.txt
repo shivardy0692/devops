@@ -1,0 +1,7 @@
+1) take git checkout (git clone <reposiory name>)
+2) create one new repository into svn server
+3) copy svn server repo into your desktop using svn checkout to create svn repo (dev01)
+4) create one file into dev01 example test.java and take toroise add then after take svn commit 
+5) create one file into git repo like author.txt (svn user name = git user name shiva<shiva@gmail.com>)
+6) apply this command into git (git svn clone --no-metadata -A authors.txt -t tags -b branches -T trunk https://DESKTOP-3L1NRCH/svn/NewRepo/trunk)
+   git svn clone -r 3 http://13.233.155.129/svn/myfirstrepo/ ( git svn clone -r HEAD <url>/root/projectA)
