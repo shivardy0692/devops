@@ -17,7 +17,7 @@
 
 ********************************************************************************************
 -> <pluginrepositories> in multi module project we can use pluginrepositories 
--> <plugins> in child project we can directly use plugins, 
--> <dependencies> 
+-> <plugins> plugin is a additional software. it will help to interact with the other system.
+-> <dependencies>  
 -> profile
 -> 

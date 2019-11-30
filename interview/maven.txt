@@ -1,0 +1,15 @@
+1) <pluginManagement> : You use pluginManagement in a parent pom to configure it in case any child pom wants to use it, but not every child plugin wants to use it. 
+   An example can be that your super pom defines some options for the maven Javadoc plugin. Not each child pom might want to use Javadoc, 
+   so you define those defaults in a pluginManagement section. The child pom that wants to use the Javadoc plugin, just defines a plugin section and will 
+   inherit the configuration from the pluginManagement definition in the parent pom.
+   
+2) Some times, you will have to refer jar files which are not in maven repository (neither local, central or remote repository). You can use these jars by 
+   placing them in project’s lib folder and configure the external dependency like this:
+
+	<dependency>
+	  <groupId>extDependency</groupId>
+	  <artifactId>extDependency</artifactId>
+	  <scope>system</scope>
+	  <version>1.0</version>
+	  <systemPath>${basedir}\war\WEB-INF\lib\extDependency.jar</systemPath>
+	</dependency>

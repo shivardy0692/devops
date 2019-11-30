@@ -1,0 +1,33 @@
+01) installation
+    @master$ yum install ansible
+    @master$ ssh-keygen
+    @master$ ssh-copy-id root@(slave_ip)
+    
+    @slave$ /etc/ssh/sshd_config
+    PermitRootLogin yes (slave)
+    [root@ip-172-31-11-161 /]# systemctl reload sshd
+
+02) edit host (etc/ansible/hosts)
+    ex : [servers]
+         172.31.15.214
+    exe : ansible -m ping servers (if ping is done)
+    exe : ansible -m shell -a "yum -y install httpd" servers
+
+03) playbook (it is set of instruction file. to do a perticular task on target or group of targets)
+    ---
+    - name: sample plaaybook
+      host: target host (or) host name specified in (/etc/ansible/hosts)
+
+    ex: 
+        ---
+        - name: sample palybook
+          host: servers
+          tasks:
+          - name: install apache
+            yum:
+              name: httpd
+              state: latest
+          - name: start apache service
+            service:
+              name: httpd
+              state: started  

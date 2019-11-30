@@ -67,3 +67,6 @@ $git branch -d test                -    delete branch(D force)
 git bucket is a java based platform 
 sudo yum -y install java-1.8.0-openjdk
 
+git remote add origin https://github.com/shivardy0692/point_in_j.git
+git push -u origin master
+

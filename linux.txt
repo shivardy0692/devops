@@ -15,6 +15,7 @@ rm *               -   to remove all files in a directory
 who                -   login information
 mkdir              -   to create a directory (folder blue color)
 mkdir -p one/two   -   to craete a directory inside a directory
+mkdir -p tomcat/{tasks,handlers,defaults,vars,templates}
 touch t{1..5}.txt  -   craete multiple file
 chmod              -   
 cp                 -   copy

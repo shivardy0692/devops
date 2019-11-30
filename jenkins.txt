@@ -34,3 +34,5 @@
 8) start, stop, restart jenkins -> sudo service jenkins start, stop, restart
 
 9) change port [->login root -> edit jenkins_port in etc/sysconfig/jenkins]
+
+10) java -jar jenkins.war --httpport=8083
