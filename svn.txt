@@ -8,4 +8,7 @@
 
 -> error log : vi etc/httpd/logs/error_log
 
+1) svn merge https://DESKTOP-3L1NRCH/svn/test_repo/trunk -r40:HEAD 
+   (work on destination path like merge from trunk to branch)
+
 

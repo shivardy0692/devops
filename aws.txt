@@ -17,4 +17,11 @@ that are published to cloudwatch. think of a matric as a variable
 monitor, and the data point represent the value of the variable over 
 time.
 
-->
+-> vpc calculation 10.0.0.0/26 :S 2^(32-26)=2^6=64
+
+-> one subnet can have one route table.
+
+-> one route table can be associated with multiple subnets.
+
+./configure --prefix=/opt/nginx --pid-path=/var/run/nginx.pid --error-log-path=/var/log/nginx/access.log --user=nginx --group=nginx --with-file-aio --with-http_sub_module --with-http_geoip_module --with-http_dav_module --with-stream --with-http_v2_module
+

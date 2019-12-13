@@ -37,6 +37,7 @@ $git rm <file name>                -    file remove permanent
 $git add -f test.php               -    add ignore file using force
 ***************************** revert data *****************************************
 $git revert --no-commit <sha1 1st commit>..HEAD
+git revert --no-commit d21c858(to)..HEAD(from)
 *************************** reset, stack****************************************
 $git reset --hard <sha1 number4>    -    revove file permanently in working directory, stage/cache, local repo(above sha1 number4)
 $git stash list                     -    temp memory area
