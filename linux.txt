@@ -1,3 +1,12 @@
+************** file permissions ******************
+r = 4, w = 2, x = 1
+drwxr-xr-x  = directory, owner, group, others
+chmod 647 file_name        -  change permisssions to a file
+add groupadd admin         -  add a group
+chmod root:admin file_name  -  change owner permissions to a file 
+chgrp root file_name        -  change owner permissions to a file 
+************************************************** 
+
 ll                 -   long list
 pwd                -   present working directory
 ls                 -   list show
@@ -24,6 +33,20 @@ mv                 -   move
 ll -lh /tmp        -   to display size of file and etc.
 
 yum                - yellow update module
+  
+**************** zip ****************************
+tar -cvf archive.tar java*       -     to create archive file (archive file is not a compress file)
+tar -uvf archive.tar java*       -     update extra file in archive (group of files combine into a one bucket is called archive file)
+tar -cvfz compress.tar.gz        -     compressed gunzip file
+compress file size is less then to archive file..
+tar -cvfj bunzip.tar.bz2 java*   -     this is also compressed file.
+du -sh archive.tar               -   to show a archive.tar file size.
+tar -tf archive.tar              -   all the files will be visible of archive file.
+**************** cut *********************
+echo "test" | cut -b 2-3 (o/p : es)
+
+vi shiva {this is test file}
+cat shiva | cut -c 1,3,6 (o/p : tii)
 
 ***************shell script******************
 sh test.sh         -   to run a script
