@@ -34,3 +34,9 @@
 8) start, stop, restart jenkins -> sudo service jenkins start, stop, restart
 
 9) change port [->login root -> edit jenkins_port in etc/sysconfig/jenkins]
+
+10) jenkins plugins: tomcat deployment (deploy to contauner)
+                   : maven project ()
+                   : ansible (publish over ssh)
+11) poll scm(auto run): */2 * * * * [m: h: d: m: day of the week]
+

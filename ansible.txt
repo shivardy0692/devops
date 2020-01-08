@@ -1,0 +1,24 @@
+ssh connection: 
+1) Edit the /etc/ssh/sshd_config file on the control machine and uncomment 
+   out the lines for PasswordAuthentication and PermitRootLogin
+2) restart the sshd service on both the machines.
+   # systemctl restart sshd
+3) To enable passwordless authentication to perform the steps shown 
+   below. Firstly add the user ansible to the /etc/sudoers file on both 
+   the machines which will enable the user ansible to run any command 
+   which requires root privileges.
+4) use ssh-keygen to generate key
+5) copy key from one machine to another machine using 
+   ssh-copy-id <IP-Address-Host-Machine>
+6) access host machine ssh ansible@<IP-Address-Host-Machine
+
+7) install ansible: $ wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
+                  : $ sudo rpm -ivh epel-release-latest-7.noarch.rpm
+                  : $ sudo yum install ansible -y 
+                  : $ ansible --version
+8) Edit the ansible.cfg file and enable the inventory file parameter on 
+   the Control machine.
+   $ sudo vi /etc/ansible/ansible.cfg
+   ex : /etc/ansible/hosts
+
+ 
