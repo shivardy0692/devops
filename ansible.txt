@@ -17,8 +17,17 @@ ssh connection:
                   : $ sudo yum install ansible -y 
                   : $ ansible --version
 8) Edit the ansible.cfg file and enable the inventory file parameter on 
-   the Control machine.
-   $ sudo vi /etc/ansible/ansible.cfg
-   ex : /etc/ansible/hosts
+   172.31.41.222 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+    }
 
+9) chmod -R /path give permisions to a folder
+
+10) vi /etc/ssh/sshd_config
+
+11) vi /etc/ansible/hosts
+
+12) 
  
