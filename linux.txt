@@ -92,6 +92,10 @@ init 6                            - restart
 reboot
 poweroff                          
 
+***********************************************
+1) heap memory: Swap space is a certain amount of space used by Linux to temporarily hold some programs that are running 
+   concurrently. This happens when RAM does not have enough memory to hold all programs that are executing.
+2) 
 
 
 
