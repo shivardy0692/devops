@@ -1,3 +1,10 @@
+error: You may try edit in /etc/ssh/sshd_config
+       PasswordAuthentication yes
+       service sshd restart (in both source and destination machines)
+  
+     : ansible all -m ping -k(reconnect)
+ 
+
 ssh connection: 
 1) Edit the /etc/ssh/sshd_config file on the control machine and uncomment 
    out the lines for PasswordAuthentication and PermitRootLogin

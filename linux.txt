@@ -31,9 +31,10 @@ cp -r              -   copy with file
 cp -v              -   copy with file
 mv                 -   move
 ll -lh /tmp        -   to display size of file and etc.
+ps -ef | grep tomcat -  status of tomcat 
 
 yum                - yellow update module
-  
+df -h              - memory status  
 **************** zip ****************************
 tar -cvf archive.tar java*       -     to create archive file (archive file is not a compress file)
 tar -uvf archive.tar java*       -     update extra file in archive (group of files combine into a one bucket is called archive file)
@@ -80,7 +81,8 @@ echo "your files are deleted"
 #usermod -g admin test
 #usermod -l test test1  - rename
 #userdel -r test1       - remove user(primary group user con't delete)
-
+visudo 
+#ssh connection between two instance - ssh -i mykey.pem ec2-user@192.168.1.100
 
 ************shutdown commands*************
 shutdown -h now          
