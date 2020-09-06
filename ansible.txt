@@ -34,3 +34,4 @@ Adhoc commands
 - ansible all -m command -a 'touch file1' (create file)
 - ansible all -m yum -a 'name=git state=present' -b
 - ansible all -m yum -a 'name=httpd state=latest' -b
+-
