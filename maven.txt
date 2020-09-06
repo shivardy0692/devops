@@ -1,4 +1,6 @@
-#) yum install java-1.8.0-openjdk
+#) sudo yum list | grep java-1.8.0
+   sudo update-alternatives --config java
+   yum install java-1.8.0-openjdk
    yum install java-1.8.0-openjdk-devel
    java -version
    mvn  -version

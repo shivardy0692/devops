@@ -3,38 +3,34 @@ error: You may try edit in /etc/ssh/sshd_config
        service sshd restart (in both source and destination machines)
   
      : ansible all -m ping -k(reconnect)
- 
+     : ansible all -m ping -vvv (full details of error)
+     : [one@ip-10-0-1-100 ~]$ sudo yum install ansible -y
+       [sudo] password for one:
+       Loaded plugins: priorities, update-motd, upgrade-helper
+       No package ansible available.
+       sol: sudo yum-config-manager --enable epel
 
-ssh connection: 
-1) Edit the /etc/ssh/sshd_config file on the control machine and uncomment 
-   out the lines for PasswordAuthentication and PermitRootLogin
-2) restart the sshd service on both the machines.
-   # systemctl restart sshd
-3) To enable passwordless authentication to perform the steps shown 
-   below. Firstly add the user ansible to the /etc/sudoers file on both 
-   the machines which will enable the user ansible to run any command 
-   which requires root privileges.
-4) use ssh-keygen to generate key
-5) copy key from one machine to another machine using 
-   ssh-copy-id <IP-Address-Host-Machine>
-6) access host machine ssh ansible@<IP-Address-Host-Machine
 
-7) install ansible: $ wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
-                  : $ sudo rpm -ivh epel-release-latest-7.noarch.rpm
-                  : $ sudo yum install ansible -y 
-                  : $ ansible --version
-8) Edit the ansible.cfg file and enable the inventory file parameter on 
-   172.31.41.222 | UNREACHABLE! => {
-    "changed": false,
-    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
-    "unreachable": true
-    }
+Ansible Installation
+--------------------------------------
+1) adduser one(master)
+2) passwd one
+3) visudo [one ALL=(ALL) NOPASSWD: ALL] (error: unreachable)
+4) groupadd admin
+5) usermod -G admin one
+6) edit sshd {# vi /etc/ssh/sshd [PasswordAuthentication yes]}
+7) repeat step:1 to step:6 on slave machine
+8) login to user one on master
+9) install ansible {1) sudo yum-config-manager --enable epel, 2) sudo yum insyall ansible -y}
+10) edit inventory file {# vi /etc/ansible/hosts [ex: 10.0.1.50]}
 
-9) chmod -R /path give permisions to a folder
+--------------------------------------
 
-10) vi /etc/ssh/sshd_config
-
-11) vi /etc/ansible/hosts
-
-12) 
- 
+Adhoc commands
+----------------
+- ansible -i /etc/ansible/hosts -m command -a 'free' (inventory, module, argument) 
+- ansible all -m user -a 'name=one passsword=one' -b (become, for higher privileges on managed nodes)
+  (we got error: permission denied)
+- ansible all -m command -a 'touch file1' (create file)
+- ansible all -m yum -a 'name=git state=present' -b
+- ansible all -m yum -a 'name=httpd state=latest' -b

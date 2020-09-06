@@ -1,0 +1,27 @@
+#!/bin/bash
+yum update -y
+yum install nginx -y
+service nginx start 
+
+
+# find / -name ec2-metadata 
+each and every details about instance {# curl http://169.254.169.254/latest/matadata} 
+if you want public ip {# curl http://169.254.169.254/latest/matadata/public-ipv4/}
+# ec2-metadata | grep -i public-ipv4 | cut -d ":" -f 2
+o/p = 1.100.1.80
+# test=$(ec2-metadata | grep -i public-ipv4 | cut -d ":" -f 2)
+i/p = echo $test
+o/p = 1.100.1.80
+
+ondemand instances
+spot instances (its not for database)
+reserved instances
+
+chkconfig nginx on
+service nginx start
+service nginx status
+
+706903415925
+ami id ami-0d14775ef716987ca 
+snapshot id snap-0669ba8bc4363e3bc
+snapshot name JenkinsByShiva06

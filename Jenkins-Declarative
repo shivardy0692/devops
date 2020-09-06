@@ -1,0 +1,7 @@
+Jenkins-Declarative
+1) + scp -o StrictHostKeyChecking=no target/abbott_01.war one@10.0.1.100:/home/one/tomcat-8.5.57/webapps/
+   Permission denied (publickey).
+   lost connection 
+   sol: edit /etc/ssh/sshd_config uncomment  
+2) WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
+   vi /home/one/.ssh/known_hosts {remove all the text}
