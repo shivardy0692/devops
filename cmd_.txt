@@ -2,3 +2,4 @@
 2) view files           ->  dir
 3) remove folder        ->  RD /S "file_path" (or) rmdir <folder_name>
 4) delete file          ->  del <file_name>
+5) shortcut key          ->  (sysdm.cpl) system properties, environment variable, edit path
