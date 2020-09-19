@@ -28,12 +28,12 @@ commands:
 ec2-instance.tf
 -------------
   resource "aws_instance" "web-1" {
-  ami           = "ami-04fcd96153cb57194"
+  ami           = "ami"
   region     = "us-east-2" or availability_zone = "us-east-2"
   instance_type = "t2.micro"
-  subnet_id     = "subnet-04135df61c1d88437" or "${aws_subnet.sebnet1-public.id}" get from terraform show
-  key_name = "shivaaws003"
-  security_groups = ["sg-075a21acf845e7da1"] or "${aws_secrity_group.allow_all.id}"
+  subnet_id     = "subnet" or "${aws_subnet.sebnet1-public.id}" get from terraform show
+  key_name = ""
+  security_groups = [""] or "${aws_secrity_group.allow_all.id}"
   associate_public_ip_address = "true"
   private_ip = "10.0.1.100" 
   tags{                         add to variable.tf [variable "ec2_name"{}]
@@ -46,8 +46,8 @@ ec2-instance.tf
 main.tf
 --------------
 provider "aws" {
-  access_key = "AKIAZZBXRV3RSQLNKRVE"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
   
 }
 
