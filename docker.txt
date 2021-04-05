@@ -3,7 +3,7 @@
 2)whats is virtualization?
  -->virtualization means run multiple os on a single machine or physical system.
 3)what is docker images?
- -->docker images are templares used to create docker containers.
+ -->docker images are templates used to create docker containers.
 4)what is containers?
  -->containers is a running instance of image.
 5)

@@ -1,16 +1,24 @@
+s3 bucket
+----------------
+$ aws configure
+$ touch file2
+$ aws s3 cp file2 s3://shivaaws003/file2 
+
+----------------
 * aws is a cloud computing service.
 
 1) what is cloud?
 -> remote access to the server
 2) what is aws?
--> 
 
 
-******************************************
+
++++++++++++++++++
+
 pam ->privacy enhanced mail
 ec2 ->elastic compute cloud
 
-**************** Amazon cloudwatch *************
++++++++++ Amazon cloudwatch ++++++++++++
 
 ->matric : a matric represents a time-ordered set of data points 
 that are published to cloudwatch. think of a matric as a variable 

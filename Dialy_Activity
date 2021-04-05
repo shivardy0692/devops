@@ -1,0 +1,58 @@
+payroll company : techcient services pvt ltd navi mumbai 
+ -hi this is shiva  and coming to my professional experience i having 5 years of experience as a devops engineer and i working on different 
+  areas into the devops configuration side like
+
+project1: Abbott Laboratories (Health Care).
+project2: Morgan Stanley (banking).
+
+1) I manage the source code repository administration part using centralized and distributed version control tool.
+
+2) Managing the application build setup for an windows based applicatios and java based applications build through jenkins.
+   
+3) We use jenkins as a continuous integration server.
+
+4) We use to setup environment on public cloud platform that is an aws.
+   [
+   cloud trail: concered mainly with who did what did on aws
+   cloud watch: concered mainly with whats happening with aws resource so u can respond to it.
+   network L4: not aware of application and simply forward traffic from client to backend (ec2 server)
+   application L7: aware of application and provide path based routing.
+   ]
+
+5) i Involved in build, deployment trouble shooting and environment issues.
+
+6) i Worked on Terraform for Infrastructure automation on cloud AWS
+   provider{access_key, secret_key}, resource{ami, instance_type=t3.xlarge}
+   terraform apply --ver-file test.tfvars -var 'aws_access_key=' -var 'aws_secret_key=' (test server)
+   
+7) we use ansible for configuration management and application build setup.{ansible-playbook  playbook1.yml  -b, 
+   ansible all -m command -a 'touch file1' (create file)}
+   
+   Playbook: name, host, tasks(modules) like yum, service, shell, 
++++++++++++++++++++++
+Docker : containers is a running instance of image.
+         docker images are templates used to create docker containers.
+         virtualization means run multiple os on a single machine or physical system.
+         docker run -ti --rm ubuntu /bin/bash (create temporary container) it --> interactive mode, d  --> demon 
+         systemctl start docker
+         docker rm $(docker ps -a -q) (remove all containers)
+
+Step 1) i will Go to Manage Jenkins → Manage Plugins. i'll Go to the Available section and find the plugin “Deploy to container Plugin” and install the plugin. 
+                 and Restart the Jenkins server.
+step 2) Deploy to container plugin takes a war/ear file and deploys that to a running remote application server at the end of a build.
+step 3) then i'll go to created Build project and click the Configure option. Choose the option “Deploy war/ear to a container
+
+- i have worked on java projects.
+- we have the pipelines in jenkins those pipeline will deploy the war file into the tomcat.
+- jenkins code will checkout into local machine.
+- we have stages wise deployments.
+- stage level, dev env level and deployment stage in the same pipeline.
+- coming to production level deployment process in different pipeline.
+ 
+- integration and delevary in one pipeline. 
+
+- we maintain supparate pipeline for production.
+- we have the plugins 
+- 
+- when binary file created those binaries are pushing into s3.
+- we use ansible for few services like deployment and configuration perpose those playbooks will takecare of my seniour devops engineers. 

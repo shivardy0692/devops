@@ -1,3 +1,13 @@
+>> A note about sed
+   To just print 3rd line use the sed command:
+   sed -n 3p /etc/resolv.conf
+
+   To just print 3rd and 5th line use the sed command:
+   sed -n -e 3p -e 5p /etc/resolv.conf
+
+   To see specific range, say show lines between 3 to 5, run:
+   sed -n 3,5p /etc/resolv.conf
+
 ************** file permissions ******************
 r = 4, w = 2, x = 1
 drwxr-xr-x  = directory, owner, group, others
@@ -34,7 +44,8 @@ ll -lh /tmp        -   to display size of file and etc.
 ps -ef | grep tomcat -  status of tomcat 
 
 yum                - yellow update module
-df -h              - memory status  
+df -h              - abbreviation for disk free (h: human redable)  
+du -h              - abbreviated from disk usage
 **************** zip ****************************
 tar -cvf archive.tar java*       -     to create archive file (archive file is not a compress file)
 tar -uvf archive.tar java*       -     update extra file in archive (group of files combine into a one bucket is called archive file)
@@ -97,9 +108,41 @@ poweroff
 ***********************************************
 1) heap memory: Swap space is a certain amount of space used by Linux to temporarily hold some programs that are running 
    concurrently. This happens when RAM does not have enough memory to hold all programs that are executing.
-2) 
+2) PWD: Use the pwd command to find out the path of the current working directory (folder) you’re in
+3) CD: To navigate through the Linux files and directories, use the cd command. cd to go straight to the home folder.
+4) LS: The ls command is used to view the contents of a directory. By default, this command will display the contents of your current working directory.
+       ls -al will list the files and directories with detailed information like the permissions, size, owner, etc.
+       ls -R will list all the files in the sub-directories as well
+       ls -a will show the hidden files
+5) CAT: It is used to list the contents of a file on the standard output (ex cat file1.txt). 
+        cat > filename creates a new file.
+6) CP : Use the cp command to copy files from the current directory to a different directory.
+7) MV: The primary use of the mv command is to move files, although it can also be used to rename files.
+8) MKDIR: Use mkdir command to make a new directory — if you type mkdir Music it will create a directory called Music.
+9) RM: The rm command is used to delete directories and the contents within them.
+10) RMDIR: If we need to delete a directory, use the rmdir command. However, rmdir only allows you to delete empty directories.
+11) TOUCH: The touch command allows you to create a blank new file through the Linux command line.
+12) LOCATE: we can use this command to locate a file, using the -i argument along with this command will make it case-insensitive, 
+            so you can search for a file even if you don’t remember its exact name.
+13) FIND: Similar to the locate command, using find also searches for files and directories. The difference is, 
+          you use the find command to locate files within a given directory.
+14) DF: Use disk free command to get a report on the system’s disk space usage, shown in percentage and KBs. If you want to see the report in megabytes, type df -m.
+15) DU: If you want to check how much space a file or a directory takes.
+16) HEAD: The head command is used to view the first lines of any text file,  if you only want to show the first five lines, type head -n 5 filename.ext.
+17) TAIL: This one has a similar function to the head command, but instead of showing the first lines, 
+          the tail command will display the last ten lines of a text file. For example, tail -n filename.ext.
+18) CHMOD: used to change the read, write, and execute permissions of files and directories (chmod 647 file_name)
+19) CHOWN: used to change the ownership permissions (chown root file name)
+20) JOBS: jobs command will display all current jobs along with their statuses. A job is basically a process that is started by the shell.
+21) KILL: If you have an unresponsive program, you can terminate it manually by using the kill command. process identification number (PID)
+22) TOP: the top command will display a list of running processes and how much CPU each process uses.
+23) GREP: it will find the word ex grep green text.txt will search for the word green in the given file.
+    CAT: It is used to list the contents of a file on the standard output (ex cat file1.txt). 
+        cat > filename creates a new file.
 
-
+Tomcat Logs: The main Apache Tomcat configuration file is at installdir/apache-tomcat/conf/server.xml.
+             Once Apache Tomcat starts, it will create several log files in the installdir/apache-tomcat/logs directory. The main log file is the catalina.
+             out file where you can find error messages. On some platforms, you may need root account privileges to view these files.
 
 
                                                                             

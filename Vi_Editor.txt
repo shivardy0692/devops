@@ -1,0 +1,9 @@
+
+------------
+- create file using vi, cat command (ex: vi test)
+- edit the file using 'i' keyword
+- replace the word using command :%s/old/new/g
+- undo a file :u
+- save a file :w
+- exit a file :q
+- save and exit a file :x 

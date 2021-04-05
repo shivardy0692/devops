@@ -63,4 +63,6 @@ value = "${aws_instance.web-1.tags.name}"
 
 s3 bucket
 ----------------
-$ aws configure                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+$ aws configure
+$ touch file2
+$ aws s3 cp file2 s3://shivaaws003/file2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
