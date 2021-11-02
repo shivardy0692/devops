@@ -1,7 +1,26 @@
+**** Ansible Installation ****
+1) create users on root : adduser shiva
+2) create group: groupadd admin
+3) add user to group: usermod -aG admin shiva
+4) create password for both user and root: passwd user & passwd root
+5) add user to sudo permission: visudo {shiva   ALL=(ALL)       NOPASSWD: ALL} 
+6) generate ssh on user machine: ssh-keygen {id_rsa, id_rsa.pub}
+7) edit & copy id_rsa.pub
+8) repeat steps 1 to 5 on target machine (adduser target)
+9) create .ssh/authorized_key on target machine
+10) paste copied date on to target machine step 7
+11) 
+
+
 error: You may try edit in /etc/ssh/sshd_config
        PasswordAuthentication yes
        service sshd restart (in both source and destination machines)
-  
+       
+   -   generate ssh-keygen -> edit & copy id_rsa.pub to target machine 
+   -   create .ssh/authorized_keys on target machine.
+   -   target machine: chmod 700 .ssh/
+                       chmod 640 .ssh/authorized_keys
+
      : ansible all -m ping -k(reconnect)
      : ansible all -m ping -vvv (full details of error)
      : [one@ip-10-0-1-100 ~]$ sudo yum install ansible -y

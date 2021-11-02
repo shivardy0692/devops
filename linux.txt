@@ -1,4 +1,4 @@
->> A note about sed
+>> A note about sed (stream editor) -n --lines, 
    To just print 3rd line use the sed command:
    sed -n 3p /etc/resolv.conf
 
@@ -8,12 +8,16 @@
    To see specific range, say show lines between 3 to 5, run:
    sed -n 3,5p /etc/resolv.conf
 
+>> test.txt {hi, hello, shiva, santhosh, murali, bora, dummugudem, arlagudem, 1-17/a, telangana, 507137}
+>> head -n 10 test.txt | tail -n 3
+   o/p: {arlagudem, 1-17/a, telangana}
+
 ************** file permissions ******************
 r = 4, w = 2, x = 1
 drwxr-xr-x  = directory, owner, group, others
 chmod 647 file_name        -  change permisssions to a file
 add groupadd admin         -  add a group
-chmod root:admin file_name  -  change owner permissions to a file 
+chown root:root file_name  -  change owner permissions to a file 
 chgrp root file_name        -  change owner permissions to a file 
 ************************************************** 
 
@@ -89,6 +93,8 @@ echo "your files are deleted"
 #groupadd admin
 #cat /etc/group
 #chmod 777 test         - give permissions to user (read, write, exicution) 
+# chmod u+x test.sh     - will give exicution permission to user.
+$ sudo usermod -a -G groupname username
 #usermod -g admin test
 #usermod -l test test1  - rename
 #userdel -r test1       - remove user(primary group user con't delete)

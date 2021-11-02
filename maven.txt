@@ -10,6 +10,7 @@
    export PATH=$PATH:$M2_HOME/bin
 
 1) mvn archetype:generate  -> it will create a project structure (1596)
+1770: remote -> org.apache.maven.archetypes:maven-archetype-webapp (An archetype which contains a sample Maven Webapp project)
 2) mvn validate            -> it will validate a project structure
 3) mvn compile             -> it will convert .jar files into .class files
 4) mvn test                -> it will test .class files

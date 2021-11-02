@@ -1,0 +1,18 @@
+replicaset: how many pods you need
+pod and container both are diff
+with in a pod container will run
+
+we can access kubernetes by using cubectl command.
+
+1. what is monolithic?
+   formed of a single large block of stone.
+ - Advantages: single unit of deployment.
+ - IDE support.
+2. Container: Light weight appplication
+3. Vm: heavy weight application
+
+-> master: kubectl is connected with api server to exicute commands.
+           etcd (database)
+		   scheduler
+		   controller manager (control all the kubelet & proxy commands)
+-> worker: kubelet, proxy, container engine(it will run the containers)
