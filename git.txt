@@ -1,3 +1,5 @@
+SSH -> git remote set-url origin git@github.com:shivardy0692/devops-nov.git (exicute this url inside the git repo in local after clone the git)
+
 single branch clone & tags
 ---------------------
 $ git clone -b branch_anme --single-branch
