@@ -1,3 +1,15 @@
+Issue-01:
+
+Username for 'https://github.com': shivardy0692
+Password for 'https://shivardy0692@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/shivardy0692/FT_GAS.git/'
+
+sol: My Account → Settings → Developer settings → Personal access tokens → Generate new token.
+     git remote set-url origin https://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@github.com/shivardy0692/FT_GAS
+-------------------------
+
 SSH -> git remote set-url origin git@github.com:shivardy0692/devops-nov.git (exicute this url inside the git repo in local after clone the git)
 
 single branch clone & tags

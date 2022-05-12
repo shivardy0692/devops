@@ -21,6 +21,7 @@ chown root:root file_name  -  change owner permissions to a file
 chgrp root file_name        -  change owner permissions to a file 
 ************************************************** 
 
+du -dh             -   memory space for perticular dir
 ll                 -   long list
 pwd                -   present working directory
 ls                 -   list show
