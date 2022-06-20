@@ -1,2 +1,9 @@
 1) change the port (apache-tomcat-8.5.45/conf/server.xml) 
    edit connection port from 8080 to 8081
+
+error: 
+
+ /home/ansible/tomcat/webapps/manager/META-INF
+
+ <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+  allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->

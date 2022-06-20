@@ -6,8 +6,10 @@
    mvn  -version
 -> yum wget http://apachemirror.wuchna.com/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
    vi .bash_profile
-   export M2_HOME=/home/one/apache-maven-3.6.2
-   export PATH=$PATH:$M2_HOME/bin
+   maven:
+   export M2_HOME=/home/dev01/maven 
+   export PATH=$PATH:$M2_HOME/bin 
+-> restart bash: source ~/.bash_profile
 
 1) mvn archetype:generate  -> it will create a project structure (1596)
 1770: remote -> org.apache.maven.archetypes:maven-archetype-webapp (An archetype which contains a sample Maven Webapp project)

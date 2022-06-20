@@ -1,3 +1,13 @@
+worker node --> name, number of executer, remote root directory, lable, launch method (launch method via ssh) -> host, cred, manually trusted verification strategy
+choose --> restrict where this project can be run?
+
+*********************************
+
+webhook --> http://13.233.150.209:8080/github-webhook/
+content type: application/json
+choose --> GitHub hook trigger for GITScm polling?
+***********************************
+
 1) role of devops engineer
 -  installatio and configuration 
 -  plugin management

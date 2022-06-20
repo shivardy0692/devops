@@ -17,9 +17,38 @@ r = 4, w = 2, x = 1
 drwxr-xr-x  = directory, owner, group, others
 chmod 647 file_name        -  change permisssions to a file
 add groupadd admin         -  add a group
-chown root:root file_name  -  change owner permissions to a file 
+chown root:root file_name  -  change owner permissions to a file
+Chown user:group filename  -  change user as well group 
 chgrp root file_name        -  change owner permissions to a file 
+sudo deluser USER GROUPNAME - To remove a user from a group
+finfer    -  Shows information of all the users logged in
+finger user_name - Gives information of a particular user
+get perticular line paragraph --> sed -n '3p' file.txt
+delete paragraph --> sed -i '2,3d' file.txt
+Linux Partion --> fdisk -l --> fdisk /dev/xvdc1
+
+bg -	To send a process to the background
+fg -	To run a stopped process in the foreground
+top -	Details on all Active Processes
+ps -	Give the status of processes running for a user
+ps PID - Gives the status of a particular process
+pidof -	Gives the Process ID (PID) of a process
+kill PID	Kills a process
+nice	Starts a process with a given priority
+renice	Changes priority of an already running process
+df	Gives free hard disk space on your system
+free	Gives free RAM on your system
+
 ************************************************** 
+cd /var/log        -   system log
+cd /var/lib/rpm    -   rpm file path (install -i, remove a package -e, upgrade -u) (redhat package manager)
+
+**The following command installs php55-5.5.10-1.el6.x86_64.rpm.
+rpm -ivh php55-5.5.10-1.el6.x86_64.rpm
+**The following command upgrades the already installed PHP with php55-5.5.10-1.el6.x86_64.rpm
+rpm -Uvh php55-5.5.10-1.el6.x86_64.rpm
+**The following command removes php55-5.5.10-1.el6.x86_64.rpm:
+rpm -e php55-5.5.10-1.el6.x86_64.rpm
 
 du -dh             -   memory space for perticular dir
 ll                 -   long list

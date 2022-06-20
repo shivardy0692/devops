@@ -15,7 +15,12 @@ SSH -> git remote set-url origin git@github.com:shivardy0692/devops-nov.git (exi
 single branch clone & tags
 ---------------------
 $ git clone -b branch_anme --single-branch
- 
+$ git switch branch_name - get remote branch
+
+  git fetch --> temp data will come from remote (details)
+  git merge origin/release (new changes will come from remote like git pull)
+  git pull = git fetch + git merge
+  
 $ git tag -a v1.0 -m "version-1.0"
 $ git push origin --tags
 $ git push origin :v.0

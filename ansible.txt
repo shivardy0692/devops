@@ -1,16 +1,18 @@
 **** Ansible Installation ****
-1) create users on root : adduser shiva
-2) create group: groupadd admin
-3) add user to group: usermod -aG admin shiva
-4) create password for both user and root: passwd user & passwd root
-5) add user to sudo permission: visudo {shiva   ALL=(ALL)       NOPASSWD: ALL} 
-6) generate ssh on user machine: ssh-keygen {id_rsa, id_rsa.pub}
-7) edit & copy id_rsa.pub
-8) repeat steps 1 to 5 on target machine (adduser target)
-9) create .ssh/authorized_key on target machine
-10) paste copied date on to target machine step 7
-11) 
-
+1) yum install ansible -y
+2) ssh connection -> add user on on both the servers ex: control & Target machines
+3) useradd ansible/passwd ansible
+4) Edit the /etc/ssh/sshd_config file on the control machine and uncomment 
+   out the lines for PasswordAuthentication and PermitRootLogin
+5) systemctl restart sshd
+6) To enable passwordless authentication to perform the steps shown below. 
+   Firstly add the user ansible to the /etc/sudoers file on both the 
+   machines which will enable the user ansible to run any command which 
+   requires root privileges
+7) create ssh key on both the machines using ssh-keygen
+8) copy ssh key from control machine to target machine using ssh-copy-id ip-172-31-7-193 
+9) Now password less connection between two servers using ssh ip-172-31-7-193
+ 
 
 error: You may try edit in /etc/ssh/sshd_config
        PasswordAuthentication yes
