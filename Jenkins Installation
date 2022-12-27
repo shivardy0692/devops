@@ -14,6 +14,9 @@ yum install java-1.8*
 Confirm Java Version
 Lets install java and set the java home
 
+#Java11 Installation.
+amazon-linux-extras install java-openjdk11
+
 java -version
 find /usr/lib/jvm/java-1.8* | head -n 3
 #JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64
