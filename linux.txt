@@ -2,6 +2,8 @@
    To just print 3rd line use the sed command:
    sed -n 3p /etc/resolv.conf
 
+   find / -name "context.xml"
+
    To just print 3rd and 5th line use the sed command:
    sed -n -e 3p -e 5p /etc/resolv.conf
 
