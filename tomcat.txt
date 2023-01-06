@@ -11,7 +11,7 @@ error:
   
 You can check the status of tomcat with the following ways:
 
-```` ps -ef | grep tomcat ````
+ps -ef | grep tomcat
 This will return the tomcat path if the tomcat is running
 
-netstat -a | grep 8080
+netstat -an |grep 8080
