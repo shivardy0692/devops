@@ -5,6 +5,7 @@ terraform plan --> it means simulation (It will shows how many resources we are 
 terrafoem apply --auto-approve --> it means deployment, after deplyment we will get statefile.
 terraform import <resource_name> <resource_id>(we will get it from aws or azure cloud) --> to recover statefile. 
 terraform backend s3 --> it will store the state file in remote location (when we are doing activity on tf file that time acquiring state lock will come)
+terraform destroy --target=module.module_pod
 ````
 
 ## Variables
