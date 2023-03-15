@@ -183,4 +183,21 @@ Tomcat Logs: The main Apache Tomcat configuration file is at installdir/apache-t
              out file where you can find error messages. On some platforms, you may need root account privileges to view these files.
 
 
-                                                                            
+#### Telnet and Netstat
+````sh
+telnet - connection between 2 servers will use telnet ex: telnet private ip port (22).
+
+netstat -ie get information about network
+netstat -r -- routing information.
+netstat -c -- it will printout the continuous o/p of the information in regards active connections.
+
+netstat -a - this is shows all the listener state, proto, local address and foreign address.
+netstat -at - it will shows only tcp protocal (transmission control protocal)
+netstat -au - udp (user data protocal)
+netstat -l -- only listening data will come
+netstat -lt -- listening tcp protocal 
+netstat -lx -- unix port
+netstat -s -- statistic information.
+
+netstat -an |grep 8080 -- perticular port listen to the server.
+````                                                                       
