@@ -67,11 +67,12 @@ $ git rm <file name>                -    file remove permanent
 $ git add -f test.php               -    add ignore file using force
 
 ++++++++++++++++++++++++++++++
-revert data
+revert data:
 
-$ git revert --no-commit <sha1 1st commit>..HEAD (unstage a file before commit) i,e,, stage means git add file_name.
-$ git revert --no-commit d21c858(to)..HEAD(from)
 $ git checkout --file.hhtml [to revert a previous step] (Discard all the changes all the files in the working area then we use git checkout.)
+$ git reset --mixed --soft --hard <file> i,e stage means git add file_name.
+$ git revert --no-commit <sha1 1st commit>..HEAD (unstage a file before commit) 
+$ git revert --no-commit d21c858(to)..HEAD(from)
 
 ++++++++++++++++++++++++++++++
 reset, stack
