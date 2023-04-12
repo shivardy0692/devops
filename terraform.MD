@@ -19,3 +19,5 @@ terraform destroy --target=module.<declare module name> ex: module.prod
 
 ## Terraform Import
 ![image](https://user-images.githubusercontent.com/48147995/223615948-17b3bfb8-d818-4004-8d25-1e0408aab222.png)
+
+## Terraform lock file:
