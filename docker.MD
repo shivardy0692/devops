@@ -1,3 +1,10 @@
+#### Docker Network:
+````sh
+Network is a collection of devices.
+
+docker run -d --name test -net host imange_name
+````
+
 1) what is docker?
  -->docker is container management
 2)whats is virtualization?
