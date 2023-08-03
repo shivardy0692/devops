@@ -2,7 +2,13 @@
 ````sh
 Network is a collection of devices.
 
-docker run -d --name test -net host imange_name
+Default - Bridge
+some cases - host
+rare cases - null
+
+if you want to access the container outside we shuold use ip address of the container and we will give port of the container ex: 192.168.1.1:8080.
+docker run -d --name test01 -p 8080:80 image_name 
+docker run -d --name test02 -net host imange_name (port is not required)
 ````
 
 1) what is docker?
