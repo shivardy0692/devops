@@ -1,3 +1,7 @@
+#### Count:
+````sh
+ls | wc -l
+````
 >> A note about sed (stream editor) -n --lines, 
    To just print 3rd line use the sed command:
    sed -n 3p /etc/resolv.conf
