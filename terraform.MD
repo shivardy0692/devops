@@ -3,7 +3,7 @@
 terraform init --> it will download the necessary provider to interact with the aws or azure cloud. (initializing modules and provider plugins)
 terraform plan --> it means simulation (It will shows how many resources we are going to add, change and destroy)
 terrafoem apply --auto-approve --> it means deployment, after deplyment we will get statefile.
-terraform import <resource_name> <resource_id>(we will get it from aws or azure cloud) --> to recover statefile. 
+terraform import <aws_subnet.subnet1 (resource_name)> <subnet-0e54fc87c15d19aef (resource_id)>(we will get it from aws or azure cloud) --> to recover statefile. 
 terraform backend s3 --> it will store the state file in remote location (when we are doing activity on tf file that time acquiring state lock will come)
 
 terraform plan --target=module.<declare module name>
