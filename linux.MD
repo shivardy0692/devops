@@ -1,3 +1,5 @@
+ps -ef|grep tomcat
+
 #### Count:
 ````sh
 ls | wc -l
